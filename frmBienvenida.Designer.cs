@@ -31,9 +31,9 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            label4 = new Label();
-            pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            lblTitulo = new Label();
+            pctFiat = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pctFiat).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -60,37 +60,37 @@
             label3.Size = new Size(0, 15);
             label3.TabIndex = 2;
             // 
-            // label4
+            // lblTitulo
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 20F);
-            label4.Location = new Point(41, 35);
-            label4.Name = "label4";
-            label4.Size = new Size(300, 37);
-            label4.TabIndex = 3;
-            label4.Text = "¡Bienvenido a Sintepart!";
+            lblTitulo.AutoSize = true;
+            lblTitulo.Font = new Font("Segoe UI", 20F);
+            lblTitulo.Location = new Point(41, 35);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(300, 37);
+            lblTitulo.TabIndex = 3;
+            lblTitulo.Text = "¡Bienvenido a Sintepart!";
             // 
-            // pictureBox1
+            // pctFiat
             // 
-            pictureBox1.Image = Properties.Resources.Fiatlogo;
-            pictureBox1.Location = new Point(119, 98);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(143, 142);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 4;
-            pictureBox1.TabStop = false;
+            pctFiat.Image = Properties.Resources.Fiatlogo;
+            pctFiat.Location = new Point(119, 98);
+            pctFiat.Name = "pctFiat";
+            pctFiat.Size = new Size(143, 142);
+            pctFiat.SizeMode = PictureBoxSizeMode.StretchImage;
+            pctFiat.TabIndex = 4;
+            pctFiat.TabStop = false;
             // 
-            // frmPrincipal
+            // frmBienvenida
             // 
             ClientSize = new Size(388, 288);
-            Controls.Add(pictureBox1);
-            Controls.Add(label4);
+            Controls.Add(pctFiat);
+            Controls.Add(lblTitulo);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "frmPrincipal";
+            Name = "frmBienvenida";
             Text = "Bienvenido";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pctFiat).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -100,7 +100,7 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private Label label4;
-        private PictureBox pictureBox1;
+        private Label lblTitulo;
+        private PictureBox pctFiat;
     }
 }

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
+            lblUsuarioo = new Label();
+            lblContraseña = new Label();
+            lblModulo = new Label();
             txtUsuario = new TextBox();
             txtContraseña = new TextBox();
             lstModulo = new ComboBox();
@@ -38,35 +38,35 @@
             btnCancelar = new Button();
             SuspendLayout();
             // 
-            // label1
+            // lblUsuarioo
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F);
-            label1.Location = new Point(43, 39);
-            label1.Name = "label1";
-            label1.Size = new Size(67, 21);
-            label1.TabIndex = 0;
-            label1.Text = "Usuario:";
+            lblUsuarioo.AutoSize = true;
+            lblUsuarioo.Font = new Font("Segoe UI", 12F);
+            lblUsuarioo.Location = new Point(43, 39);
+            lblUsuarioo.Name = "lblUsuarioo";
+            lblUsuarioo.Size = new Size(67, 21);
+            lblUsuarioo.TabIndex = 0;
+            lblUsuarioo.Text = "Usuario:";
             // 
-            // label2
+            // lblContraseña
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(43, 88);
-            label2.Name = "label2";
-            label2.Size = new Size(92, 21);
-            label2.TabIndex = 1;
-            label2.Text = "Contraseña:";
+            lblContraseña.AutoSize = true;
+            lblContraseña.Font = new Font("Segoe UI", 12F);
+            lblContraseña.Location = new Point(43, 88);
+            lblContraseña.Name = "lblContraseña";
+            lblContraseña.Size = new Size(92, 21);
+            lblContraseña.TabIndex = 1;
+            lblContraseña.Text = "Contraseña:";
             // 
-            // label3
+            // lblModulo
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F);
-            label3.Location = new Point(43, 137);
-            label3.Name = "label3";
-            label3.Size = new Size(67, 21);
-            label3.TabIndex = 2;
-            label3.Text = "Módulo:";
+            lblModulo.AutoSize = true;
+            lblModulo.Font = new Font("Segoe UI", 12F);
+            lblModulo.Location = new Point(43, 137);
+            lblModulo.Name = "lblModulo";
+            lblModulo.Size = new Size(67, 21);
+            lblModulo.TabIndex = 2;
+            lblModulo.Text = "Módulo:";
             // 
             // txtUsuario
             // 
@@ -124,7 +124,7 @@
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
             // 
-            // frmSecundario
+            // frmLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -134,10 +134,10 @@
             Controls.Add(lstModulo);
             Controls.Add(txtContraseña);
             Controls.Add(txtUsuario);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Name = "frmSecundario";
+            Controls.Add(lblModulo);
+            Controls.Add(lblContraseña);
+            Controls.Add(lblUsuarioo);
+            Name = "frmLogin";
             Text = "Login";
             ResumeLayout(false);
             PerformLayout();
@@ -145,9 +145,9 @@
 
         #endregion
 
-        private Label label1;
-        private Label label2;
-        private Label label3;
+        private Label lblUsuarioo;
+        private Label lblContraseña;
+        private Label lblModulo;
         private TextBox txtUsuario;
         private TextBox txtContraseña;
         private ComboBox lstModulo;
