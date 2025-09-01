@@ -31,11 +31,11 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            comboBox1 = new ComboBox();
-            button1 = new Button();
-            button2 = new Button();
+            txtUsuario = new TextBox();
+            txtContraseña = new TextBox();
+            lstModulo = new ComboBox();
+            btnAceptar = new Button();
+            btnCancelar = new Button();
             SuspendLayout();
             // 
             // label1
@@ -68,56 +68,72 @@
             label3.TabIndex = 2;
             label3.Text = "Módulo:";
             // 
-            // textBox1
+            // txtUsuario
             // 
-            textBox1.Location = new Point(192, 37);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(188, 23);
-            textBox1.TabIndex = 3;
+            txtUsuario.ForeColor = Color.FromArgb(0, 0, 192);
+            txtUsuario.Location = new Point(192, 37);
+            txtUsuario.MaxLength = 10;
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.Size = new Size(188, 23);
+            txtUsuario.TabIndex = 3;
+            txtUsuario.TextChanged += txtUsuario_TextChanged;
             // 
-            // textBox2
+            // txtContraseña
             // 
-            textBox2.Location = new Point(192, 86);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(188, 23);
-            textBox2.TabIndex = 4;
+            txtContraseña.Enabled = false;
+            txtContraseña.ForeColor = Color.Black;
+            txtContraseña.Location = new Point(192, 86);
+            txtContraseña.MaxLength = 10;
+            txtContraseña.Name = "txtContraseña";
+            txtContraseña.PasswordChar = '#';
+            txtContraseña.Size = new Size(188, 23);
+            txtContraseña.TabIndex = 4;
+            txtContraseña.TextChanged += txtContraseña_TextChanged;
             // 
-            // comboBox1
+            // lstModulo
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(192, 135);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(188, 23);
-            comboBox1.TabIndex = 5;
+            lstModulo.DropDownStyle = ComboBoxStyle.DropDownList;
+            lstModulo.Enabled = false;
+            lstModulo.ForeColor = Color.Black;
+            lstModulo.FormattingEnabled = true;
+            lstModulo.Items.AddRange(new object[] { "ADM", "SIST", "COM", "VTA" });
+            lstModulo.Location = new Point(192, 135);
+            lstModulo.Name = "lstModulo";
+            lstModulo.Size = new Size(188, 23);
+            lstModulo.TabIndex = 5;
+            lstModulo.SelectedIndexChanged += lstModulo_SelectedIndexChanged_1;
             // 
-            // button1
+            // btnAceptar
             // 
-            button1.Location = new Point(429, 63);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 6;
-            button1.Text = "Aceptar";
-            button1.UseVisualStyleBackColor = true;
+            btnAceptar.Enabled = false;
+            btnAceptar.Location = new Point(429, 63);
+            btnAceptar.Name = "btnAceptar";
+            btnAceptar.Size = new Size(75, 23);
+            btnAceptar.TabIndex = 6;
+            btnAceptar.Text = "Aceptar";
+            btnAceptar.UseVisualStyleBackColor = true;
+            btnAceptar.Click += btnAceptar_Click;
             // 
-            // button2
+            // btnCancelar
             // 
-            button2.Location = new Point(429, 112);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 7;
-            button2.Text = "Cancelar";
-            button2.UseVisualStyleBackColor = true;
+            btnCancelar.Location = new Point(429, 112);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(75, 23);
+            btnCancelar.TabIndex = 7;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // frmSecundario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(551, 208);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(btnCancelar);
+            Controls.Add(btnAceptar);
+            Controls.Add(lstModulo);
+            Controls.Add(txtContraseña);
+            Controls.Add(txtUsuario);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -132,10 +148,10 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private ComboBox comboBox1;
-        private Button button1;
-        private Button button2;
+        private TextBox txtUsuario;
+        private TextBox txtContraseña;
+        private ComboBox lstModulo;
+        private Button btnAceptar;
+        private Button btnCancelar;
     }
 }
