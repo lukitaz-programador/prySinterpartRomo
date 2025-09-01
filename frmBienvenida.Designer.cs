@@ -1,6 +1,6 @@
 ﻿namespace prySinterpartRomo
 {
-    partial class frmPrincipal
+    partial class frmBienvenida
     {
         /// <summary>
         ///  Required designer variable.

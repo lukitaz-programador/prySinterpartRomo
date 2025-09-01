@@ -1,8 +1,8 @@
 namespace prySinterpartRomo
 {
-    public partial class frmPrincipal : Form
+    public partial class frmBienvenida : Form
     {
-        public frmPrincipal()
+        public frmBienvenida()
         {
             InitializeComponent();
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace prySinterpartRomo
 {
-    public partial class frmSecundario : Form
+    public partial class frmLogin : Form
     {
-        public frmSecundario()
+        public frmLogin()
         {
             InitializeComponent();
         }
@@ -135,10 +135,14 @@ namespace prySinterpartRomo
             }
             if (Acceso)
             {
-                frmPrincipal frmPrincipal = new frmPrincipal();
+                frmBienvenida frmPrincipal = new frmBienvenida();
                 Hide();
                 frmPrincipal.ShowDialog();
                 Show();
+            }
+            else
+            {
+                MessageBox.Show("Usuario inválido");
             }
         }
     }
